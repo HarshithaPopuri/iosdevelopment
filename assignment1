@@ -1,0 +1,30 @@
+        // Fibonacci Series
+var i:Int
+var n1=0
+var n2=1
+var n=0
+for i in 0...10
+{
+    print(n1)
+    n=n1
+    n1=n2
+    n2=n1+n
+}
+         // To find first recurring character in the sting
+func first(text:String)-> String?
+{
+    var previous = Set<Character>()
+    for chara in text
+    {
+        if previous.contains(chara)
+        {
+            return String (chara)
+        }
+        else{
+            previous.insert(chara)
+        }
+        
+    }
+    return nil
+}
+print("the first repeated character is:",(first(text:"programming"))!)
